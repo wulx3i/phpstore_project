@@ -39,23 +39,34 @@
 <section class="producets" id="producets">
   
     <h2 class="producetsh2" style="color: #fff; font-size: 87px;">Our  Producets</h2>
-        <div class="producets-cards">
-        <div class="one">
-            <img src="dior.jpg" alt="DIOR CASE">
-            <h3>DIOR Phonecase</h3>
-            <p>75 <img src="Saudi_Riyal_Symbol.svg.png" alt="SA"></p>
-        </div>
-        <div class="two">
-            <img src="muimui-black.jpg" alt="muimui Phonecase">
-            <h3>muimui Phonecase</h3>
-            <p>75 <img src="Saudi_Riyal_Symbol.svg.png" alt="SA"></p>
-        </div>
-        <div class="three">
-            <img src="tiger.jpg" alt="TIGER Phonecase">
-            <h3>TIGER Phonecase</h3>
-            <p>75 <img src="Saudi_Riyal_Symbol.svg.png" alt="SA"></p>
-      </div>
-      </div>
+    <div class="cards">
+            <div class="producets-cards">
+            
+                <img src="dior.jpg" alt="DIOR CASE">
+                <h3>DIOR Phonecase</h3>
+                <p>
+                    <img src="Saudi_Riyal_Symbol.svg.png" alt="SA">
+                    75 
+                </p>
+            </div>
+            <div class="producets-cards">
+                <img src="muimui-black.jpg" alt="muimui Phonecase">
+                <h3>muimui Phonecase</h3>
+                <p>
+                    <img src="Saudi_Riyal_Symbol.svg.png" alt="SA">
+                    75 
+                </p>
+            </div>
+            <div class="producets-cards">
+                <img src="tiger.jpg" alt="TIGER Phonecase">
+                <h3>TIGER Phonecase</h3>
+                <p>
+                    <img src="Saudi_Riyal_Symbol.svg.png" alt="SA">
+                    75 
+                </p>
+            
+             </div>
+          
   
 
       <?php
@@ -72,13 +83,16 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
     $image = $row['image'];
 ?>
     <!-- عرض المنتجات الجديده المُضافه من الادمن في الصفحه الرئيسيه -->
-    <div class="product-card" >
-    <div class="three">
+    
+      <div class="producets-cards">
         <img src="<?php echo $image; ?>" alt="<?php echo $name; ?>">
         <h3><?php echo $name; ?></h3>
-        <p ><?php echo $price; ?><img src="Saudi_Riyal_Symbol.svg.png" alt="SA"></p>
-    </div>
-    </div>
+        <p >
+             <img src="Saudi_Riyal_Symbol.svg.png" alt="SA">
+             <?php echo $price; ?>
+        </p>
+      </div>
+    
 <?php
 } 
 ?>
@@ -86,7 +100,7 @@ while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 
 
 
-</div>
+    </div>
 </section>
   
 
